@@ -21,7 +21,7 @@
 import axios from 'axios'
 import { v4 } from 'uuid'
 
-const apiBase = ''
+const apiBase = 'https://jbqq4c2vkh.execute-api.us-east-1.amazonaws.com/staging/todo'
 
 export default {
   name: 'App',
@@ -40,8 +40,8 @@ export default {
         method: 'get',
         url: apiBase
       }
-      // let res = await axios(opts)
-      // this.todos = res.data
+      let res = await axios(opts)
+      this.todos = res.data
     },
 
     add: async function () {
@@ -52,11 +52,11 @@ export default {
       }
 
       let opts = {
-        method: 'get',
+        method: 'post',
         url: apiBase,
         data
       }
-      // await axios(opts)
+      await axios(opts)
 
       this.todos.push(data)
       this.todoBeingAdded = ''
@@ -74,7 +74,7 @@ export default {
         url: `${apiBase}?id=${todo.id}`,
         data: todo
       }
-      // await axios(opts)
+      await axios(opts)
     }
   }
 };
