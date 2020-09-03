@@ -5,7 +5,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 const createRecord = async function (data) {
   return new Promise((resolve, reject) => {
     const params = {
-      TableName: 'TodoDbTable',
+      TableName: 'TodoerDbTable',
       Item: {
         appId: 'todoapp',
         entityId: data.id,

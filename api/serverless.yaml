@@ -6,7 +6,7 @@ provider:
   profile: streaming_devops_svc
   stage: ${opt:stage, 'staging'}
   environment:
-    TABLE_NAME: TodoDbTable
+    TABLE_NAME: TodoerDbTable
   iamRoleStatements:
     - Effect: "Allow"
       Action:

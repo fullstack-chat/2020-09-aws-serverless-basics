@@ -21,7 +21,7 @@
 import axios from 'axios'
 import { v4 } from 'uuid'
 
-const apiBase = 'https://jbqq4c2vkh.execute-api.us-east-1.amazonaws.com/staging/todo'
+const apiBase = 'https://qtut8l2wec.execute-api.us-east-1.amazonaws.com/staging/todo'
 
 export default {
   name: 'App',

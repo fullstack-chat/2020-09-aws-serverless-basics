@@ -5,7 +5,7 @@ const docClient = new AWS.DynamoDB.DocumentClient();
 const fetchRecords = async function () {
   return new Promise((resolve, reject) => {
     const params = {
-      TableName: 'TodoDbTable'
+      TableName: 'TodoerDbTable'
     };
 
     docClient.scan(params, function (err, data) {
